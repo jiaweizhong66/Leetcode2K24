@@ -33,4 +33,30 @@ public:
 };
 ```
 
+Time Complexity: O(n^2) this is easy to understand
+Space Complexity: O(1)
+
 ## Double Pointers:
+
+Utilizing slow fast pointer in one for loop to finish the job of double for loop.
+
+Slow pointer: point to the index of updated array element
+Fast pointer: find element of new array which is the array that does not contain the target element
+
+```
+class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        int slowIndex = 0;
+        for (int fastIndex = 0; fastIndex < nums.size(); fastIndex++) {
+            if (val != nums[fastIndex]) {
+                nums[slowIndex++] = nums[fastIndex];
+            }
+        }
+        return slowIndex;
+    }
+};
+```
+
+Time Complexity: O(n)
+Space Complexity: O(1)
