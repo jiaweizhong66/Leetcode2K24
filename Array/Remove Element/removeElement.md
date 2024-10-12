@@ -1,5 +1,7 @@
 # Removing Element Introduction
 
+[Leetcode #27](https://leetcode.com/problems/remove-element/description/)
+
 Question: Give you an array nums, and a int val. Remove all elements equal to the val and return the length of the new array.
 Do not use extra space for array, you must only use extra O(1)
 
